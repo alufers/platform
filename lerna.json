@@ -18,7 +18,6 @@
       "allowBranch": "master",
       "conventionalCommits": true,
       "exact": true,
-      "githubRelease": true,
       "message": "chore(release): publish %s"
     }
   }
