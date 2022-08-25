@@ -1,4 +1,6 @@
-:warning: **This project is currently unmaintained**
+:warning: **This is a fork of the original project**
+
+It enables Ivy and makes it work with Angular 13+
 
 # Angular Redux
 

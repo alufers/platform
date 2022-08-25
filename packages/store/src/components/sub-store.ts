@@ -1,3 +1,5 @@
+/// <reference types="symbol-observable" />
+
 import { AnyAction, Dispatch, Reducer } from 'redux';
 import { Observable } from 'rxjs';
 import { distinctUntilChanged, map } from 'rxjs/operators';
@@ -26,7 +28,7 @@ export class SubStore<State> implements ObservableStore<State> {
     registerFractalReducer(basePath, localReducer);
   }
 
-  dispatch: Dispatch<AnyAction> = action =>
+  dispatch: Dispatch<AnyAction> = (action) =>
     this.rootStore.dispatch({
       ...(action as any),
       '@angular-redux::fractalkey': JSON.stringify(this.basePath),
@@ -48,10 +50,12 @@ export class SubStore<State> implements ObservableStore<State> {
     selector?: Selector<State, SelectedState>,
     comparator?: Comparator,
   ): Observable<SelectedState> =>
-    this.rootStore.select<State>(this.basePath).pipe(
-      map(resolveToFunctionSelector(selector)),
-      distinctUntilChanged(comparator),
-    );
+    this.rootStore
+      .select<State>(this.basePath)
+      .pipe(
+        map(resolveToFunctionSelector(selector)),
+        distinctUntilChanged(comparator),
+      );
 
   subscribe = (listener: () => void): (() => void) => {
     const subscription = this.select().subscribe(listener);
@@ -60,4 +64,9 @@ export class SubStore<State> implements ObservableStore<State> {
 
   replaceReducer = (nextLocalReducer: Reducer<State, AnyAction>) =>
     replaceLocalReducer(this.basePath, nextLocalReducer);
+
+  [Symbol.observable](): any {
+    return this.select();
+  }
 }
+``;

@@ -44,8 +44,10 @@ import { ConnectArrayTemplate } from './connect-array-template';
     },
   ],
 })
-export class ConnectArrayDirective extends ControlContainer
-  implements OnInit, OnDestroy {
+export class ConnectArrayDirective
+  extends ControlContainer
+  implements OnInit, OnDestroy
+{
   private stateSubscription: Unsubscribe;
 
   private array = new FormArray([]);
@@ -72,7 +74,7 @@ export class ConnectArrayDirective extends ControlContainer
   ) {
     super();
 
-    this.stateSubscription = this.store.subscribe(state =>
+    this.stateSubscription = this.store.subscribe((state) =>
       this.resetState(state),
     );
 
@@ -90,9 +92,7 @@ export class ConnectArrayDirective extends ControlContainer
     this.formDirective.addControl(this as any);
   }
 
-  get name(): string {
-    return this.key || '';
-  }
+  name = this.key;
 
   get control(): FormArray {
     return this.array;
@@ -140,19 +140,18 @@ export class ConnectArrayDirective extends ControlContainer
     for (const value of iterable) {
       const viewRef =
         this.viewContainerRef.length > index
-          ? (this.viewContainerRef.get(index) as EmbeddedViewRef<
-              ConnectArrayTemplate
-            >)
+          ? (this.viewContainerRef.get(
+              index,
+            ) as EmbeddedViewRef<ConnectArrayTemplate>)
           : null;
 
       if (viewRef == null) {
-        const embeddedViewRef = this.viewContainerRef.createEmbeddedView<
-          ConnectArrayTemplate
-        >(
-          this.templateRef,
-          new ConnectArrayTemplate(index, index, value),
-          index,
-        );
+        const embeddedViewRef =
+          this.viewContainerRef.createEmbeddedView<ConnectArrayTemplate>(
+            this.templateRef,
+            new ConnectArrayTemplate(index, index, value),
+            index,
+          );
 
         this.patchDescendantControls(embeddedViewRef);
 
@@ -191,10 +190,10 @@ export class ConnectArrayDirective extends ControlContainer
 
   private patchDescendantControls(viewRef: any) {
     const groups = Object.keys(viewRef._view)
-      .map(k => viewRef._view[k])
-      .filter(c => c instanceof NgModelGroup);
+      .map((k) => viewRef._view[k])
+      .filter((c) => c instanceof NgModelGroup);
 
-    groups.forEach(c => {
+    groups.forEach((c) => {
       Object.defineProperties(c, {
         _parent: {
           value: this,

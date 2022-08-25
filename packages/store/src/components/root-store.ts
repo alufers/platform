@@ -1,3 +1,5 @@
+/// <reference types="symbol-observable" />
+
 import {
   AnyAction,
   applyMiddleware,
@@ -37,8 +39,8 @@ export class RootStore<RootState> extends NgRedux<RootState> {
 
     NgRedux.instance = this;
     this.store$ = new BehaviorSubject<RootState | undefined>(undefined).pipe(
-      filter(n => n !== undefined),
-      switchMap(observableStore => observableStore as any),
+      filter((n) => n !== undefined),
+      switchMap((observableStore) => observableStore as any),
       // TODO: fix this? needing to explicitly cast this is wrong
     ) as BehaviorSubject<RootState>;
   }
@@ -123,4 +125,8 @@ export class RootStore<RootState> extends NgRedux<RootState> {
         observer.complete();
       };
     });
+
+  [Symbol.observable](): any {
+    return this.select();
+  }
 }

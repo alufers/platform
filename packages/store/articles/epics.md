@@ -44,7 +44,7 @@ Next, we create an `@Injectable SessionEpic` service:
 
 ```typescript
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http } from '@angular/common/http';
 import { ActionsObservable } from 'redux-observable';
 import { SessionActions } from '../actions/session.actions';
 import { Observable } from 'rxjs/Observable';
@@ -63,11 +63,11 @@ export class SessionEpics {
     return action$.ofType(SessionActions.LOGIN_USER).mergeMap(({ payload }) => {
       return this.http
         .post(`${BASE_URL}/auth/login`, payload)
-        .map(result => ({
+        .map((result) => ({
           type: SessionActions.LOGIN_USER_SUCCESS,
           payload: result.json().meta,
         }))
-        .catch(error =>
+        .catch((error) =>
           Observable.of({
             type: SessionActions.LOGIN_USER_ERROR,
           }),

@@ -1,4 +1,4 @@
-import { AfterContentInit, Input, OnDestroy } from '@angular/core';
+import { AfterContentInit, Directive, Input, OnDestroy } from '@angular/core';
 
 import {
   AbstractControl,
@@ -22,6 +22,7 @@ export interface ControlPair {
   control: AbstractControl;
 }
 
+@Directive({})
 export class ConnectBase implements OnDestroy, AfterContentInit {
   get path(): string[] {
     const path =
@@ -104,7 +105,7 @@ export class ConnectBase implements OnDestroy, AfterContentInit {
       );
     }
 
-    return pairs.filter(p => {
+    return pairs.filter((p) => {
       const parent = (p.control as any)._parent;
       return parent === this.formGroup.control || parent === this.formGroup;
     });
@@ -118,7 +119,7 @@ export class ConnectBase implements OnDestroy, AfterContentInit {
 
     const children = this.descendants([], formElement);
 
-    children.forEach(c => {
+    children.forEach((c) => {
       const { path, control } = c;
 
       const value = State.get(this.getState(), this.path.concat(path));

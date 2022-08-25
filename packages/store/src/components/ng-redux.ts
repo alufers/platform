@@ -1,3 +1,5 @@
+/// <reference types="symbol-observable" />
+
 import {
   AnyAction,
   Dispatch,
@@ -66,4 +68,6 @@ export abstract class NgRedux<RootState> implements ObservableStore<RootState> {
     basePath: PathSelector,
     localReducer: Reducer<SubState, AnyAction>,
   ) => ObservableStore<SubState>;
+
+  abstract [Symbol.observable](): any;
 }

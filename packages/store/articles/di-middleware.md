@@ -7,7 +7,7 @@ Here's a contrived example that fetches a name from a remote API using Angular's
 
 ```typescript
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http } from '@angular/common/http';
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()

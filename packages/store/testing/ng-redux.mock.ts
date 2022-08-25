@@ -1,3 +1,5 @@
+/// <reference types="symbol-observable" />
+
 // TODO: See if this linting rule can be enabled with new build process (ng-packagr)
 // tslint:disable:no-implicit-dependencies
 // tslint:disable:member-ordering
@@ -102,4 +104,8 @@ export class MockNgRedux<T = {}> extends NgRedux<T> {
     ___?: Middleware[],
     ____?: StoreEnhancer<any>[],
   ): void => undefined;
+
+  [Symbol.observable](): any {
+    return this.select();
+  }
 }

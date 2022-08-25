@@ -1,5 +1,5 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
 
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -14,11 +14,9 @@ const URLS = {
 
 @Injectable()
 export class AnimalAPIService {
-  constructor(private http: Http) {}
-
+  constructor(private http: HttpClient) {}
   getAll = (animalType: AnimalType): Observable<Animal[]> =>
-    this.http.get(URLS[animalType]).pipe(
-      map(resp => resp.json()),
-      map(records => records.map(fromServer)),
-    );
+    this.http
+      .get(URLS[animalType])
+      .pipe(map((records) => (records as any).map(fromServer)));
 }

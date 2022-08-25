@@ -43,7 +43,7 @@ Open up your app's `src/app/app.module.ts` and add the following lines:
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule } from '@angular/common/http';
 
 import { NgReduxModule, NgRedux } from '@angular-redux/store'; // <- New
 
@@ -353,7 +353,7 @@ export class AppComponent implements OnDestroy {
   ) {
     this.subscription = ngRedux
       .select<number>('count') // <- New
-      .subscribe(newCount => (this.count = newCount)); // <- New
+      .subscribe((newCount) => (this.count = newCount)); // <- New
   }
 
   ngOnDestroy() {

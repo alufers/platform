@@ -2,7 +2,6 @@ import { NgReduxRouterModule } from '@angular-redux/router';
 import { NgReduxModule } from '@angular-redux/store';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
@@ -16,6 +15,7 @@ import { StoreModule } from './store/module';
 // Top-level app component constructs.
 import { AppComponent } from './component';
 import { appRoutes } from './routes';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,7 +23,7 @@ import { appRoutes } from './routes';
     RouterModule.forRoot(appRoutes),
     BrowserModule,
     FormsModule,
-    HttpModule,
+    HttpClientModule,
     NgReduxModule,
     NgReduxRouterModule.forRoot(),
     AnimalModule,
