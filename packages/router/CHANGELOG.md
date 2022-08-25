@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.0.1](https://github.com/alufers/platform/compare/v13.0.0...v13.0.1) (2022-08-25)
+
+**Note:** Version bump only for package @angular-redux-ivy/router
+
 # 13.0.0 (2022-08-25)
 
 ### Bug Fixes
