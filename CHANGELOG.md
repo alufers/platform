@@ -3,6 +3,58 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 13.0.0 (2022-08-25)
+
+### Bug Fixes
+
+- add typescript unused checks ([#32](https://github.com/alufers/platform/issues/32)) ([65c4229](https://github.com/alufers/platform/commit/65c4229))
+- canary release auto approve ([#80](https://github.com/alufers/platform/issues/80)) ([e888aa5](https://github.com/alufers/platform/commit/e888aa5))
+- external tslint running on library source code ([#35](https://github.com/alufers/platform/issues/35)) ([d6c6745](https://github.com/alufers/platform/commit/d6c6745))
+- lerna config again ([39fee80](https://github.com/alufers/platform/commit/39fee80))
+- reactive forms not updating on changes in store ([#41](https://github.com/alufers/platform/issues/41)) ([bd87846](https://github.com/alufers/platform/commit/bd87846))
+- remove git signing ([547ae25](https://github.com/alufers/platform/commit/547ae25))
+- rm WeakMap, we can't use it for key with type string ([#15](https://github.com/alufers/platform/issues/15)) ([6a9bdc2](https://github.com/alufers/platform/commit/6a9bdc2))
+- typings entry point and failing definitions ([#36](https://github.com/alufers/platform/issues/36)) ([ae0373d](https://github.com/alufers/platform/commit/ae0373d))
+- update peer dependencies from ^9.0.0 to ^10.0.0 ([#87](https://github.com/alufers/platform/issues/87)) ([fcea502](https://github.com/alufers/platform/commit/fcea502))
+- versions ([d6b7003](https://github.com/alufers/platform/commit/d6b7003))
+- versions again ([97fab20](https://github.com/alufers/platform/commit/97fab20))
+- **build:** No chai for you ([#209](https://github.com/alufers/platform/issues/209)) ([be35f03](https://github.com/alufers/platform/commit/be35f03))
+- **ci:** fix canary release not working with yarn ([#62](https://github.com/alufers/platform/issues/62)) ([90564d3](https://github.com/alufers/platform/commit/90564d3))
+- **deps:** Change zone.js version ([#222](https://github.com/alufers/platform/issues/222)) ([e62e149](https://github.com/alufers/platform/commit/e62e149))
+- **example:** Fix local dev mode ([#80](https://github.com/alufers/platform/issues/80)) ([#81](https://github.com/alufers/platform/issues/81)) ([b06721f](https://github.com/alufers/platform/commit/b06721f))
+- **form:** connect formGroup input not mapped to connect base ([#94](https://github.com/alufers/platform/issues/94)) ([9d1d6db](https://github.com/alufers/platform/commit/9d1d6db)), closes [#85](https://github.com/alufers/platform/issues/85)
+- **ngReduxModule:** Generate metadata ([#237](https://github.com/alufers/platform/issues/237)) ([8b4b9d8](https://github.com/alufers/platform/commit/8b4b9d8))
+- **package.json:** add redux as dependencies ([#132](https://github.com/alufers/platform/issues/132)) ([5fdeb19](https://github.com/alufers/platform/commit/5fdeb19))
+
+### chore
+
+- **build:** use ng-packagr ([#37](https://github.com/alufers/platform/issues/37)) ([dffe23a](https://github.com/alufers/platform/commit/dffe23a)), closes [#9](https://github.com/alufers/platform/issues/9)
+- **linting:** add global tslint rules ([#35](https://github.com/alufers/platform/issues/35)) ([336cc60](https://github.com/alufers/platform/commit/336cc60)), closes [#4](https://github.com/alufers/platform/issues/4)
+
+### Features
+
+- add new devtools window prop name ([#58](https://github.com/alufers/platform/issues/58)) ([55b15a6](https://github.com/alufers/platform/commit/55b15a6))
+- add peer dep support for Angular 5 ([#51](https://github.com/alufers/platform/issues/51)) ([13b4cb8](https://github.com/alufers/platform/commit/13b4cb8))
+- Introduced a new function called provideStore() which accepts a already created Redux store ([#142](https://github.com/alufers/platform/issues/142)) ([a6c4aaf](https://github.com/alufers/platform/commit/a6c4aaf)), closes [#141](https://github.com/alufers/platform/issues/141)
+- split directives into separate modules ([#37](https://github.com/alufers/platform/issues/37)) ([6250ea8](https://github.com/alufers/platform/commit/6250ea8))
+- upgrade to angular 7 ([#72](https://github.com/alufers/platform/issues/72)) ([18d9245](https://github.com/alufers/platform/commit/18d9245)), closes [#65](https://github.com/alufers/platform/issues/65) [#66](https://github.com/alufers/platform/issues/66) [#67](https://github.com/alufers/platform/issues/67) [#68](https://github.com/alufers/platform/issues/68) [#69](https://github.com/alufers/platform/issues/69) [#70](https://github.com/alufers/platform/issues/70) [#71](https://github.com/alufers/platform/issues/71) [#74](https://github.com/alufers/platform/issues/74) [#79](https://github.com/alufers/platform/issues/79)
+- Typescript Port ([#33](https://github.com/alufers/platform/issues/33)) ([33ea991](https://github.com/alufers/platform/commit/33ea991)), closes [#35](https://github.com/alufers/platform/issues/35) [#36](https://github.com/alufers/platform/issues/36) [#37](https://github.com/alufers/platform/issues/37) [#38](https://github.com/alufers/platform/issues/38) [#39](https://github.com/alufers/platform/issues/39) [#52](https://github.com/alufers/platform/issues/52) [#50](https://github.com/alufers/platform/issues/50) [#55](https://github.com/alufers/platform/issues/55) [#53](https://github.com/alufers/platform/issues/53)
+- **aot:** Support AoT - [#223](https://github.com/alufers/platform/issues/223) ([#226](https://github.com/alufers/platform/issues/226)) ([a6d7826](https://github.com/alufers/platform/commit/a6d7826))
+- **dispatch:** Create dispatch decorator ([#385](https://github.com/alufers/platform/issues/385)) ([4513566](https://github.com/alufers/platform/commit/4513566))
+
+### BREAKING CHANGES
+
+- Upgrades Angular dependencies to v7
+- **build:** - changes the output to conform to the Angular Package Format. This may cause subtle differences in consumption behaviour
+
+* peer dependencies have been corrected to actual dependencies
+
+- **linting:** - ConnectArray has been renamed to ConnectArrayDirective
+
+* ReactiveConnect has been renamed to ReactiveConnectDirective
+* Connect has been renamed to ConnectDirective
+* interfaces with an "I" prefix have had that prefix removed (e.g "IAppStore" -> "AppStore")
+
 # [10.0.0](https://github.com/angular-redux/platform/compare/v9.0.1...v10.0.0) (2019-05-04)
 
 ### Bug Fixes
@@ -222,7 +274,7 @@ See [the docs](https://github.com/angular-redux/store/blob/master/articles/fract
 ```typescript
 import { select$ } from 'angular-redux/store';
 
-export const debounceAndTriple = obs$ => obs$.debounce(300).map(x => 3 * x);
+export const debounceAndTriple = (obs$) => obs$.debounce(300).map((x) => 3 * x);
 
 class Foo {
   @select$(['foo', 'bar'], debounceAndTriple)
@@ -714,10 +766,9 @@ import { App } from './app';
 // Confusing and hard to use with dependency injection.
 const middleware = [createLogger()];
 const enhancers = [persistState('counter', { key: 'example-app' })];
-const store = compose(
-  applyMiddleware(middleware),
-  ...enhancers,
-)(createStore)(rootReducer);
+const store = compose(applyMiddleware(middleware), ...enhancers)(createStore)(
+  rootReducer,
+);
 
 bootstrap(App, [provide(store)]);
 ```
@@ -815,7 +866,7 @@ export class MyComponent implements OnInit {
 
   constructor(private ngRedux: NgRedux) {
     this.countByKey$ = this.ngRedux.select('count');
-    this.countByFunc$ = this.ngRedux.select(state => state.count);
+    this.countByFunc$ = this.ngRedux.select((state) => state.count);
   }
 }
 ```
@@ -833,7 +884,7 @@ export class MyComponent implements OnInit {
   constructor(private ngRedux: ngRedux) {
     // even if the reference of the object has changed,
     // if the data is the same - it wont be treated as a change
-    this.person$ = this.ngRedux.select(state => state.people.get(0), is);
+    this.person$ = this.ngRedux.select((state) => state.people.get(0), is);
   }
 }
 ```

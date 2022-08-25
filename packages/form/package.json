@@ -1,6 +1,6 @@
 {
   "name": "@angular-redux-ivy/form",
-  "version": "12.0.0",
+  "version": "13.0.0",
   "description": "Build Angular 2+ forms with Redux",
   "author": "Chris Bond",
   "license": "MIT",
