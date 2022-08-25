@@ -6,17 +6,17 @@
       "packages/*"
     ],
     "nohoist": [
-      "example-app/@angular-redux/store",
-      "example-app/@angular-redux/form",
-      "example-app/@angular-redux/router",
+      "example-app/@angular-redux-ivy/store",
+      "example-app/@angular-redux-ivy/form",
+      "example-app/@angular-redux-ivy/router",
       "example-app/ng-packagr"
     ]
   },
   "scripts": {
     "build": "npm-run-all build:*",
-    "build:store": "yarn workspace @angular-redux/store build",
-    "build:form": "yarn workspace @angular-redux/form build",
-    "build:router": "yarn workspace @angular-redux/router build",
+    "build:store": "yarn workspace @angular-redux-ivy/store build",
+    "build:form": "yarn workspace @angular-redux-ivy/form build",
+    "build:router": "yarn workspace @angular-redux-ivy/router build",
     "build:example-app": "yarn workspace example-app build",
     "release:canary": "lerna publish --canary --dist-tag canary --npm-client npm",
     "release:stable": "lerna version",
