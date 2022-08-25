@@ -1,3 +1,7 @@
+:warning: **This is a fork of the original project**
+
+It enables Ivy and makes it work with Angular 13+
+
 # Example App: Zoo Animals
 
 This is a sample project showing how the following packages work together to make a simple

@@ -4,17 +4,17 @@
   "description": "Build Angular 2+ forms with Redux",
   "author": "Chris Bond",
   "license": "MIT",
-  "homepage": "https://github.com/angular-redux/platform",
+  "homepage": "https://github.com/alufers/platform",
   "main": "src/index.ts",
   "scripts": {
     "build": "ng-packagr -p ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/angular-redux/platform.git"
+    "url": "git+https://github.com/alufers/platform.git"
   },
   "bugs": {
-    "url": "https://github.com/angular-redux/platform/issues"
+    "url": "https://github.com/alufers/platform/issues"
   },
   "keywords": [
     "angular",
@@ -37,5 +37,6 @@
   },
   "dependencies": {
     "immutable": "^4.0.0-rc.12"
-  }
+  },
+  "gitHead": "e224d8bd911ab8bb85f9be2760dfec15f4d89a16"
 }

@@ -1,3 +1,7 @@
+:warning: **This is a fork of the original project**
+
+It enables Ivy and makes it work with Angular 13+
+
 # @angular-redux/form
 
 [![npm version](https://img.shields.io/npm/v/@angular-redux/form.svg)](https://www.npmjs.com/package/@angular-redux/form)
