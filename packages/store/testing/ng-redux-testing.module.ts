@@ -1,6 +1,6 @@
 // TODO: See if this linting rule can be enabled with new build process (ng-packagr)
 // tslint:disable:no-implicit-dependencies
-import { DevToolsExtension, NgRedux } from '@angular-redux/store';
+import { DevToolsExtension, NgRedux } from '@angular-redux-ivy/store';
 import { NgModule } from '@angular/core';
 import { MockDevToolsExtension } from './dev-tools.mock';
 import { MockNgRedux } from './ng-redux.mock';
