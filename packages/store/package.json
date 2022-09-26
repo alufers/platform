@@ -1,6 +1,6 @@
 {
   "name": "@angular-redux-ivy/store",
-  "version": "13.0.1",
+  "version": "13.0.2",
   "description": "Angular bindings for Redux",
   "author": "William Buchwalter <wbuchwalter@gmail.com> (http://github.com/wbuchwalter)",
   "license": "MIT",
