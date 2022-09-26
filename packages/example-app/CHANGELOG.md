@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [13.0.4](https://github.com/alufers/platform/compare/v13.0.3...v13.0.4) (2022-09-26)
+
+### Bug Fixes
+
+- fixup imports pointing to old packages ([34955ec](https://github.com/alufers/platform/commit/34955ec))
+
 # 13.0.0 (2022-08-25)
 
 ### Bug Fixes
