@@ -1,4 +1,4 @@
-import { DevToolsExtension, NgRedux } from '@angular-redux/store';
+import { DevToolsExtension, NgRedux } from '@angular-redux-ivy/store';
 import {
   MockNgRedux,
   NgReduxTestingModule,

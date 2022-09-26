@@ -1,4 +1,4 @@
-import { select, select$ } from '@angular-redux/store';
+import { select, select$ } from '@angular-redux-ivy/store';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { pipe, prop, sortBy, values } from 'ramda';
 
@@ -9,14 +9,7 @@ import { AnimalAPIActions } from '../animals/api/actions';
 import { Animal, ANIMAL_TYPES } from '../animals/model';
 
 export function sortAnimals(animalDictionary$: Observable<{}>) {
-  return animalDictionary$.pipe(
-    map(
-      pipe(
-        values,
-        sortBy(prop('name')),
-      ),
-    ),
-  );
+  return animalDictionary$.pipe(map(pipe(values, sortBy(prop('name')))));
 }
 
 @Component({

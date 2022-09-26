@@ -1,4 +1,4 @@
-import { select$ } from '@angular-redux/store';
+import { select$ } from '@angular-redux-ivy/store';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -7,8 +7,8 @@ const MAX_COMMENT_CHARS = 300;
 
 export const charsLeft = (obs: Observable<string>): Observable<number> =>
   obs.pipe(
-    map(comments => comments || ''),
-    map(comments => MAX_COMMENT_CHARS - comments.length),
+    map((comments) => comments || ''),
+    map((comments) => MAX_COMMENT_CHARS - comments.length),
   );
 
 @Component({

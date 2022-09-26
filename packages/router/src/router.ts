@@ -1,4 +1,4 @@
-import { NgRedux } from '@angular-redux/store';
+import { NgRedux } from '@angular-redux-ivy/store';
 import { Location } from '@angular/common';
 import { Injectable } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
@@ -55,7 +55,7 @@ export class NgReduxRouter {
    * you can supply this argument as an Observable of the current url state.
    */
   initialize(
-    selectLocationFromState: (state: any) => string = state => state.router,
+    selectLocationFromState: (state: any) => string = (state) => state.router,
     urlState$?: Observable<string> | undefined,
   ) {
     if (this.initialized) {
@@ -73,12 +73,12 @@ export class NgReduxRouter {
     this.initialized = true;
   }
 
-  private selectLocationFromState: (state: any) => string = state =>
+  private selectLocationFromState: (state: any) => string = (state) =>
     state.router;
 
   private getDefaultUrlStateObservable() {
     return this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd),
+      filter((event) => event instanceof NavigationEnd),
       map(() => this.location.path()),
       distinctUntilChanged(),
     );
@@ -140,7 +140,7 @@ export class NgReduxRouter {
     };
 
     this.reduxSubscription = this.ngRedux
-      .select(state => this.selectLocationFromState(state))
+      .select((state) => this.selectLocationFromState(state))
       .pipe(distinctUntilChanged())
       .subscribe(handleLocationChange);
   }

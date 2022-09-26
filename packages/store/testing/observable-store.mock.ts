@@ -1,6 +1,6 @@
 // TODO: See if this linting rule can be enabled with new build process (ng-packagr)
 // tslint:disable:no-implicit-dependencies
-import { Comparator, PathSelector, Selector } from '@angular-redux/store';
+import { Comparator, PathSelector, Selector } from '@angular-redux-ivy/store';
 import { AnyAction, Dispatch, Reducer } from 'redux';
 import { Observable, ReplaySubject, Subject } from 'rxjs';
 import { distinctUntilChanged } from 'rxjs/operators';
@@ -33,12 +33,12 @@ export class MockObservableStore<State> {
     this.initSelectorStub<SelectedState>(selector, comparator).subject;
 
   reset = () => {
-    Object.keys(this.subStores).forEach(k => this.subStores[k].reset());
+    Object.keys(this.subStores).forEach((k) => this.subStores[k].reset());
     this.selections = {};
     this.subStores = {};
   };
 
-  dispatch: Dispatch<AnyAction> = action => action;
+  dispatch: Dispatch<AnyAction> = (action) => action;
   replaceReducer = () => null;
   getState = () => ({});
   subscribe = () => () => null;
@@ -62,9 +62,9 @@ export class MockObservableStore<State> {
     ...pathSelectors: PathSelector[]
   ): MockObservableStore<any> => {
     const [first, ...rest] = pathSelectors;
-    return (first
-      ? this.initSubStore(first).getSubStore(...rest)
-      : this) as MockObservableStore<SubState>;
+    return (
+      first ? this.initSubStore(first).getSubStore(...rest) : this
+    ) as MockObservableStore<SubState>;
   };
 
   private initSubStore<SubState>(basePath: PathSelector) {

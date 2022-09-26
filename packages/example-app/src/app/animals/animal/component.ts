@@ -1,4 +1,9 @@
-import { dispatch, select, select$, WithSubStore } from '@angular-redux/store';
+import {
+  dispatch,
+  select,
+  select$,
+  WithSubStore,
+} from '@angular-redux-ivy/store';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -7,7 +12,7 @@ import { Animal } from '../model';
 import { animalComponentReducer } from './reducers';
 
 export function toSubTotal(obs: Observable<Animal>): Observable<number> {
-  return obs.pipe(map(s => s.ticketPrice * s.tickets));
+  return obs.pipe(map((s) => s.ticketPrice * s.tickets));
 }
 
 /**

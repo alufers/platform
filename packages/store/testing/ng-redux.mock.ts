@@ -8,7 +8,7 @@ import {
   NgRedux,
   PathSelector,
   Selector,
-} from '@angular-redux/store';
+} from '@angular-redux-ivy/store';
 import {
   AnyAction,
   Dispatch,

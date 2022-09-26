@@ -1,5 +1,5 @@
 import { NgReduxRouterModule } from '@angular-redux/router';
-import { NgReduxModule } from '@angular-redux/store';
+import { NgReduxModule } from '@angular-redux-ivy/store';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';

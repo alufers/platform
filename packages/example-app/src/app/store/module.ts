@@ -10,7 +10,7 @@ import {
   DevToolsExtension,
   NgRedux,
   NgReduxModule,
-} from '@angular-redux/store';
+} from '@angular-redux-ivy/store';
 
 // Redux ecosystem stuff.
 import { FluxStandardAction } from 'flux-standard-action';

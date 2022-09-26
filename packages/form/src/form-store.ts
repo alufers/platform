@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { NgForm } from '@angular/forms';
 
-import { NgRedux } from '@angular-redux/store';
+import { NgRedux } from '@angular-redux-ivy/store';
 
 import { Action, Unsubscribe } from 'redux';
 
